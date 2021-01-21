@@ -53,14 +53,16 @@
   echo '<br>';
   }
 
+  function __construct($euros, $pounds, $exchange){
+    $this->euros=$euros;
+    $this->pounds=$pounds;
+    $this->exchange=$exchange;
+  }
+
 }
 
-  $currency=new currency();
-  $currency->seteuros(3);
-  $currency->setpounds(4);
-  $currency->setexchange(0.10);
-  $currency->print();
-
+  $currency1=new currency(1, 2, 3);
+  $currency1->print();
   ?>
 </body>
 </HTML>
