@@ -45,11 +45,11 @@
   //PRINTERS
   public function print()
   {
-  echo "El euros es: ". $this->geteuros();
+  echo "<b>El euros es:</b> ". $this->geteuros();
   echo '<br>';
-  echo "El exchange es: ". $this->getexchange();
+  echo "<b><ins>El exchange es:</ins></b> ". $this->getexchange();
   echo '<br>';
-  echo "El pounds es: ". $this->getpounds();
+  echo "<b>El pounds es:</b> ". $this->getpounds();
   echo '<br>';
   }
 
@@ -68,15 +68,15 @@
 
 }//acaba la classe
   $euros = 2;
-  $exchange = 0.89;
+  $exchange = 0;
 
   $currency1=new currency($euros,$exchange);
   if ($exchange>0)
     $currency1->convertpoundstoeuros();
   else {
-    echo "The exchange rate has to be greater than 0 <br>";
+    echo "<h2>The exchange rate has to be greater than 0</h2><br>";
   }
-  
+
   $currency1->print();
   ?>
 </body>
