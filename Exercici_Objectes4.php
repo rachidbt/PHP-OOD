@@ -54,23 +54,23 @@
   }
 
   //construccio
-  function __construct($euros, $exchange){
-    $this->euros=$euros;
+  function __construct($pounds, $exchange){
+    $this->pounds=$pounds;
     $this->exchange=$exchange;
   }
 
   //Functions conversio
   function convertpoundstoeuros (){
-    $this->pounds=$this->euros*$this->exchange;
-    return $this->pounds;
+    $this->euros=$this->pounds*$this->exchange;
+    return $this->euros;
   }
 
 
 }//acaba la classe
-  $euros = 2;
+  $pounds = 2;
   $exchange = 0;
 
-  $currency1=new currency($euros,$exchange);
+  $currency1=new currency($pounds,$exchange);
   if ($exchange>0)
     $currency1->convertpoundstoeuros();
   else {
