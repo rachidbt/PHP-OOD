@@ -1,7 +1,7 @@
 <?php
-define (SPEAKINGCAPABILITY, array('miau','guau','language'));
-define (EATINGCAPABILITY, array('meat','vegs','meat and vegs'));
-define (MOVINGCAPABILITY, array('walk','fly'));
+define ('SPEAKINGCAPABILITY', array('miau','guau','language'));
+define ('EATINGCAPABILITY', array('meat','vegs','meat and vegs'));
+define ('MOVINGCAPABILITY', array('walk','fly'));
 
 class LivingBeing{
   public $age;
