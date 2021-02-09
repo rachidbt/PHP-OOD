@@ -1,7 +1,8 @@
 <?php
+include "student.php";
 class Apprentice extends Student
 {
-public $FCTBusinessName;
+private $FCTBusinessName;
 
 //GETTERS
 public function getFTCBusinessName()
@@ -23,7 +24,7 @@ echo $this->FTCBusinessName.'<br>';
 
 public function __construct()
 {
-parent::construct();
+parent::__construct();
 $this->setFTCBusinessName.'<br>';
 }
 }

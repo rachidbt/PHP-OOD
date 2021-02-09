@@ -1,7 +1,9 @@
 <?php
+include "person.php";
+
 class Teacher extends Person
 {
-public $salary;
+private $salary;
 
 //SETTERS
 public function setSalary($salary)
@@ -15,16 +17,16 @@ public function getsalary()
   return $this->salary;
 }
 
-public function __construct()
+public function __construct($name,$dni,$salary)
 {
-parent::construct();
-echo $this->setSalary;
+parent::__construct($name,$dni);
+echo $this->salary=$salary;
 }
 
 public function print()
 {
 parent::print();
-echo $this->salary.'<br><br>';
+echo 'The salary of tecahers is ' .$this->salary.'<br><br>';
 }
 }
 ?>
