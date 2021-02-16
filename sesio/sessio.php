@@ -5,7 +5,7 @@ $_SESSION['color_prefe'] = $_REQUEST['color'];
 $_SESSION['contador'] = 0;
 $id_usuari = $_SESSION['id_usuari'];
 $colorpreferit= $_SESSION['color_prefe'];
-$db = new mysqli('localhost','phpmyadmin','1234','variables');
+$db = new mysqli('localhost','phpmyadmin','Felanitx2','variables');
 $query= "SELECT nom_usuari from sessio where nom_usuari='$id_usuari'";
 $verificar= $db->query($query);
 $num_files = mysqli_num_rows($verificar);

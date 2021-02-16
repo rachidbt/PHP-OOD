@@ -8,7 +8,7 @@ $conta = ++$_SESSION['contador'];
 
 echo $conta;
 
-$db = new mysqli('localhost','phpmyadmin','1234','variables');
+$db = new mysqli('localhost','phpmyadmin','Felanitx2','variables');
 $query_update="update sessio set nombre_visites='$conta' where nom_usuari='$usuari'";
 $result= $db->query($query_update);
 ?>

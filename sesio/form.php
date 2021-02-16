@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$db = new mysqli('localhost','phpmyadmin','Hola','sessió');
+$db = new mysqli('localhost','phpmyadmin','Felanitx2','variables');
 
 $usuari = $_SESSION['id_usuari'];
 $_SESSION['contrasenya']=$_REQUEST['passwd'];
