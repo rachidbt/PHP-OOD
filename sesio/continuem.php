@@ -1,35 +1,44 @@
 <?php
 
 session_start();
-$colores=$_SESSION['colour'];
+
+$usuari = $_SESSION['id_usuari'];
+$color = $_SESSION['color_prefe'];
+$conta = ++$_SESSION['contador'];
+
+echo $conta;
+
+$db = new mysqli('localhost','phpmyadmin','1234','variables');
+$query_update="update sessio set nombre_visites='$conta' where nom_usuari='$usuari'";
+$result= $db->query($query_update);
 ?>
 
     <HTML>
+
     <head>
 
         <title>...i acabem l'exemple de variables de sessió!</title>
-
+	<style>
+		body {
+  			background-color: <?php echo $color ?>;
+		}
+	</style>
     </head>
 
-    <body style="background-color:<?php echo $colores?>">
+    <body>
 
-<?php
-echo "L'usuari que havíeu escrit era: ".$_SESSION['id_user'];"<br>";
+        <?php
 
-echo "La contrasenya que havíeu escrit era: $colores ";
+echo "Usuari que havíeu escrit era: ".$_SESSION['id_usuari'];echo "<br>";
 
-$contador
+echo "La contrasenya que havíeu escrit era: ".$_SESSION['color_prefe'];
 
-
-
-
-
-
-
-
-
-
+if ($conta>4) {
+  echo "<form action='form.php' method='post'> POSA LA TEVA CONTRASENYA:<input type='password' name='passwd'> <input type='submit' value='Envia!'></form>";
+}
+$db->close();
 ?>
+
     </body>
 
     </HTML>
