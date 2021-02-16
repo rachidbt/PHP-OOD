@@ -1,12 +1,12 @@
 <?php
 session_start();
-$_SESSION['id_usuari']  = $_REQUEST['usuari'];
-$_SESSION['color_prefe'] = $_REQUEST['color'];
+$_SESSION['usuari']  = $_REQUEST['usuari'];
+$_SESSION['color'] = $_REQUEST['color'];
 $_SESSION['contador'] = 0;
-$id_usuari = $_SESSION['id_usuari'];
-$colorpreferit= $_SESSION['color_prefe'];
-$db = new mysqli('localhost','phpmyadmin','Felanitx2','variables');
-$query= "SELECT nom_usuari from sessio where nom_usuari='$id_usuari'";
+$usuari = $_SESSION['usuari'];
+$color= $_SESSION['color'];
+$db = new mysqli('10.100.65.216','phpmyadmin','Felanitx2','variables');
+$query= "SELECT usuari from var_sessio where usuari='$usuari'";
 $verificar= $db->query($query);
 $num_files = mysqli_num_rows($verificar);
 if ($db->connect_error != null) {
@@ -14,7 +14,7 @@ if ($db->connect_error != null) {
       exit();
     }else{
       if ($num_files == 0){
-        $query_insert="insert into sessio (nom_usuari, color_prefe) values ('$id_usuari', '$colorpreferit')";
+        $query_insert="insert into var_sessio (usuari, color) values ('$usuari', '$color')";
         $result= $db->query($query_insert);
       	if ($result){
       	  echo "Ha funcionat!!!";
