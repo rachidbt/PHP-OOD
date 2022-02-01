@@ -14,6 +14,6 @@ try {
     echo filtreDividir($dividend, $divisor);
 }
 catch (Exception $e) {
-    echo "S'ha capturat l'excepció: " . $e->getMessage() . "<br>";
+    echo "S'ha capturat l'excepció: " . $e->getMessage() . "<br><br>";
 }
 ?>
