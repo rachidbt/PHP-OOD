@@ -60,16 +60,16 @@ $this->sou=$sou;
 
 }//END CLASS BECARI
 
-$professorASI=new Professor('Lola','12345678A');
-$professorASI->salari(10);
-$alumneASI=new Estudiant('Joana','98765432S');
-$alumneASI->matricular('ASI');
-$becariASI=new Becari('Anna','38475619T');
-$becariASI->salari(8);
+$professorASIX=new Professor('Lola','12345678A');
+$professorASIX->salari(10);
+$alumneASIX=new Estudiant('Joana','98765432S');
+$alumneASIX->matricular('ASIX');
+$becariASIX=new Becari('Anna','38475619T');
+$becariASIX->salari(8);
 
-echo $professorASI->dades_persona();
-echo $alumneASI->dades_persona();
-echo $becariASI->dades_persona();
+echo $professorASIX->dades_persona();
+echo $alumneASIX->dades_persona();
+echo $becariASIX->dades_persona();
 ?>
 
 </body>
